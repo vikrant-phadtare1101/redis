@@ -25,6 +25,9 @@ void ExampleQt::run() {
         cerr << "Error: " << m_ctx->errstr << endl;
         redisAsyncFree(m_ctx);
         emit finished();
+         cerr << "Error: " << m_ctx->errstr << endl;
+        redisAsyncFree(m_ctx);
+        emit finished();
     }
 
     m_adapter.setContext(m_ctx);
